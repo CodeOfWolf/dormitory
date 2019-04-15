@@ -22,7 +22,7 @@
   <body class="text-center">
     <form class="form-signin" action="${pageContext.request.contextPath}/login.do"  method="post">
       <img class="mb-4" src="images/jmuxh.jpg" alt="" width="100" height="100">
-      <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
+      <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
       <label for="inputSno" class="sr-only">账号</label>
       <input type="text" name="sno" class="form-control" placeholder="账号" required="" autofocus="">
       <label for="inputPassword" class="sr-only">密码</label>
