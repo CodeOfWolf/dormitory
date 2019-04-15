@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/jmuxh.jpg">
 
-    <title>登录</title>
+    <title>学生登录</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./login_files/bootstrap.min.css" rel="stylesheet">

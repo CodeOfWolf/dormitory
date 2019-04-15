@@ -12,10 +12,10 @@
     <title>管理员端</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../dashboard_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./dashboard_files/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../dashboard_files/dashboard.css" rel="stylesheet">
+    <link href="./dashboard_files/dashboard.css" rel="stylesheet">
   <style type="text/css">/* Chart.js */
 @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
 
@@ -66,13 +66,13 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../dashboard_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./dashboard_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../dashboard_files/popper.min.js"></script>
-    <script src="../dashboard_files/bootstrap.min.js"></script>
+    <script src="./dashboard_files/popper.min.js"></script>
+    <script src="./dashboard_files/bootstrap.min.js"></script>
 
     <!-- Icons -->
-    <script src="../dashboard_files/feather.min.js"></script>
+    <script src="./dashboard_files/feather.min.js"></script>
     <script>
       feather.replace()
     </script>
