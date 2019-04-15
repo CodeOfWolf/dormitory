@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <link rel="icon" href="images/jmuxh.jpg">
 
     <title>登录</title>
 
@@ -21,12 +21,12 @@
 
   <body class="text-center">
     <form class="form-signin" action="${pageContext.request.contextPath}/login.do"  method="post">
-      <img class="mb-4" src="" alt="" width="72" height="72">
+      <img class="mb-4" src="images/jmuxh.jpg" alt="" width="100" height="100">
       <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
       <label for="inputSno" class="sr-only">账号</label>
       <input type="text" name="sno" class="form-control" placeholder="账号" required="" autofocus="">
-      <label for="inputPassword" class="sr-only">密码</label>
-      <input type="password" name="password" class="form-control" placeholder="密码" required="">
+      <label for="inputPassword" class="sr-only">密码</label>
+      <input type="password" name="password" class="form-control" placeholder="密码" required="">
       <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
       <p class="mt-5 mb-3 text-muted">@2019-2020</p>
     </form>

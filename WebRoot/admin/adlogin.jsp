@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <link rel="icon" href="images/jmuxh.jpg">
 
     <title>登录</title>
 
@@ -20,7 +20,7 @@
 
   <body class="text-center">
     <form class="form-signin">
-      <img class="mb-4" src="" alt="" width="72" height="72">
+      <img class="mb-4" src="images/jmuxh.jpg" alt="" width="100" height="100">
       <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
       <label for="inputEmail" class="sr-only">账号</label>
       <input type="text" name="id" class="form-control" placeholder="账号" required="" autofocus="">
