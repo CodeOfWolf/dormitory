@@ -80,20 +80,22 @@
                         <th>专业</th>
                         <th>年级</th>
                         <th>班级</th>
+                        <th>宿舍楼</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach item="" var="">
+                    <c:forEach var="i" items="${students}" >
                         <tr>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
+                        	<td>${i.sno}</td>
+                        	<td>${i.sname}</td>
+                        	<td>${i.did}</td>
+                        	<td>${i.sex}</td>
+                        	<td>${i.tel}</td>
+                        	<td>${i.institute}</td>
+                        	<td>${i.majorname}</td>
+                        	<td>${i.grade}</td>
+                        	<td>${i.classname}</td>
+                        	<td>${i.dname}</td>
                         	<td>
                         		<a href="" type="button" class="btn btn-primary">编辑</a>
                         		<a href="" type="button" class="btn btn-danger">删除</a>

@@ -8,4 +8,9 @@
 		resultType="cn.jmu.po.Administrator">
 		select * from Administrator where mno=#{mno}
 	</select>
+	
+	<select id="findStudentByDname" parameterType="String"
+		resultType="cn.jmu.po.Student">
+		select * from Student where dname=#{dname}
+	</select>
 </mapper>
