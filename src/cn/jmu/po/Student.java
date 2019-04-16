@@ -3,7 +3,7 @@ package cn.jmu.po;
 public class Student {
 	private String sno;
 	private String sname;
-	private String roomname;
+	private String did;
 	private String sex;
 	private String password;
 	private String tel;
@@ -11,6 +11,7 @@ public class Student {
 	private String majorname;
 	private String grade;
 	private String classname;
+	private String dname;
 	public String getSno() {
 		return sno;
 	}
@@ -23,11 +24,12 @@ public class Student {
 	public void setSname(String sname) {
 		this.sname = sname;
 	}
-	public String getRoomname() {
-		return roomname;
+
+	public String getDid() {
+		return did;
 	}
-	public void setRoomname(String roomname) {
-		this.roomname = roomname;
+	public void setDid(String did) {
+		this.did = did;
 	}
 	public String getSex() {
 		return sex;
@@ -71,11 +73,18 @@ public class Student {
 	public void setClassname(String classname) {
 		this.classname = classname;
 	}
+	public String getDname() {
+		return dname;
+	}
+	public void setDname(String dname) {
+		this.dname = dname;
+	}
 	@Override
 	public String toString() {
-		return "Student [sno=" + sno + ", sname=" + sname + ", roomname=" + roomname + ", sex=" + sex + ", password="
-				+ password + ", tel=" + tel + ", institute=" + institute + ", majorname=" + majorname + ", grade="
-				+ grade + ", classname=" + classname + "]";
+		return "Student [sno=" + sno + ", sname=" + sname + ", did=" + did + ", sex=" + sex + ", password=" + password
+				+ ", tel=" + tel + ", institute=" + institute + ", majorname=" + majorname + ", grade=" + grade
+				+ ", classname=" + classname + ", dname=" + dname + "]";
 	}
+
 	
 }

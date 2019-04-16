@@ -5,6 +5,13 @@ public class Administrator {
 	private String adname;
 	private String tel;
 	private String password;
+	private String dname;
+	public String getDname() {
+		return dname;
+	}
+	public void setDname(String dname) {
+		this.dname = dname;
+	}
 	public String getMno() {
 		return mno;
 	}
@@ -31,7 +38,9 @@ public class Administrator {
 	}
 	@Override
 	public String toString() {
-		return "Administrator [mno=" + mno + ", adname=" + adname + ", tel=" + tel + ", password=" + password + "]";
+		return "Administrator [mno=" + mno + ", adname=" + adname + ", tel=" + tel + ", password=" + password
+				+ ", dname=" + dname + "]";
 	}
+
 	
 }
