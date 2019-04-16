@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <!-- saved from url=(0053)https://getbootstrap.com/docs/4.1/examples/dashboard/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -11,13 +12,13 @@
     <meta name="author" content="" />
     <link rel="icon" href="images/jmuxh.jpg" />
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>学生信息</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../dashboard_files/bootstrap.min.css" rel="stylesheet" />
+    <link href="./dashboard_files/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="../dashboard_files/dashboard.css" rel="stylesheet" />
+    <link href="./dashboard_files/dashboard.css" rel="stylesheet" />
     <style type="text/css">/* Chart.js */
     @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
 
@@ -65,132 +66,41 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
 
-            <h2>Section title</h2>
+            <h2><a href="" type="button" class="btn btn-success">添加</a></h2>
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
-                        <th>#</th>
-                        <th>lastName</th>
-                        <th>email</th>
-                        <th>gender</th>
-                        <th>department</th>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>房间号</th>
+                        <th>性别</th>
+                        <th>手机号</th>
+                        <th>学院</th>
+                        <th>专业</th>
+                        <th>年级</th>
+                        <th>班级</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <c:forEach item="" var="">
                         <tr>
-                          <td>1,001</td>
-                          <td>Lorem</td>
-                          <td>ipsum</td>
-                          <td>dolor</td>
-                          <td>sit</td>
+                        	<td></td>
+                        	<td></td>
+                        	<td></td>
+                        	<td></td>
+                        	<td></td>
+                        	<td></td>
+                        	<td></td>
+                        	<td></td>
+                        	<td></td>
+                        	<td>
+                        		<a href="" type="button" class="btn btn-primary">编辑</a>
+                        		<a href="" type="button" class="btn btn-danger">删除</a>
+                        	</td>
                         </tr>
-                        <tr>
-                          <td>1,002</td>
-                          <td>amet</td>
-                          <td>consectetur</td>
-                          <td>adipiscing</td>
-                          <td>elit</td>
-                        </tr>
-                        <tr>
-                          <td>1,003</td>
-                          <td>Integer</td>
-                          <td>nec</td>
-                          <td>odio</td>
-                          <td>Praesent</td>
-                        </tr>
-                        <tr>
-                          <td>1,003</td>
-                          <td>libero</td>
-                          <td>Sed</td>
-                          <td>cursus</td>
-                          <td>ante</td>
-                        </tr>
-                        <tr>
-                          <td>1,004</td>
-                          <td>dapibus</td>
-                          <td>diam</td>
-                          <td>Sed</td>
-                          <td>nisi</td>
-                        </tr>
-                        <tr>
-                          <td>1,005</td>
-                          <td>Nulla</td>
-                          <td>quis</td>
-                          <td>sem</td>
-                          <td>at</td>
-                        </tr>
-                        <tr>
-                          <td>1,006</td>
-                          <td>nibh</td>
-                          <td>elementum</td>
-                          <td>imperdiet</td>
-                          <td>Duis</td>
-                        </tr>
-                        <tr>
-                          <td>1,007</td>
-                          <td>sagittis</td>
-                          <td>ipsum</td>
-                          <td>Praesent</td>
-                          <td>mauris</td>
-                        </tr>
-                        <tr>
-                          <td>1,008</td>
-                          <td>Fusce</td>
-                          <td>nec</td>
-                          <td>tellus</td>
-                          <td>sed</td>
-                        </tr>
-                        <tr>
-                          <td>1,009</td>
-                          <td>augue</td>
-                          <td>semper</td>
-                          <td>porta</td>
-                          <td>Mauris</td>
-                        </tr>
-                        <tr>
-                          <td>1,010</td>
-                          <td>massa</td>
-                          <td>Vestibulum</td>
-                          <td>lacinia</td>
-                          <td>arcu</td>
-                        </tr>
-                        <tr>
-                          <td>1,011</td>
-                          <td>eget</td>
-                          <td>nulla</td>
-                          <td>Class</td>
-                          <td>aptent</td>
-                        </tr>
-                        <tr>
-                          <td>1,012</td>
-                          <td>taciti</td>
-                          <td>sociosqu</td>
-                          <td>ad</td>
-                          <td>litora</td>
-                        </tr>
-                        <tr>
-                          <td>1,013</td>
-                          <td>torquent</td>
-                          <td>per</td>
-                          <td>conubia</td>
-                          <td>nostra</td>
-                        </tr>
-                        <tr>
-                          <td>1,014</td>
-                          <td>per</td>
-                          <td>inceptos</td>
-                          <td>himenaeos</td>
-                          <td>Curabitur</td>
-                        </tr>
-                        <tr>
-                          <td>1,015</td>
-                          <td>sodales</td>
-                          <td>ligula</td>
-                          <td>in</td>
-                          <td>libero</td>
-                        </tr>
-                      </tbody>
+                     </c:forEach>
+                     </tbody>
                 </table>
             </div>
         </main>
@@ -203,12 +113,12 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../dashboard_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="../dashboard_files/popper.min.js"></script>
-<script src="../dashboard_files/bootstrap.min.js"></script>
+<script src="./dashboard_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="./dashboard_files/popper.min.js"></script>
+<script src="./dashboard_files/bootstrap.min.js"></script>
 
 <!-- Icons -->
-<script src="../dashboard_files/feather.min.js"></script>
+<script src="./dashboard_files/feather.min.js"></script>
 <script>
     feather.replace()
 </script>
