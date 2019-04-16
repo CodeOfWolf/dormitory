@@ -13,4 +13,28 @@
 		resultType="cn.jmu.po.Student">
 		select * from Student where dname=#{dname}
 	</select>
+	
+	<select id="findStudentBySno" parameterType="String"
+		resultType="cn.jmu.po.Student">
+		select * from Student where sno=#{sno}
+	</select>
+	
+	<delete id="deleteStudent" parameterType="String">
+		delete from Student where sno=#{sno}
+	</delete>
+	
+	<insert id="insertStudent"
+		parameterType="cn.jmu.po.Student">
+		insert into
+		Student(sno,sname,did,sex,password,tel,institute,majorname,grade,classname,dname)
+		values(#{sno},#{sname},#{did},#{sex},#{password},#{tel},#{institute},#{majorname},#{grade},#{classname},#{dname})
+	</insert>
+	
+	<update id="updateStudent" parameterType="cn.jmu.po.Student">
+		update Student
+		set
+		sno=#{sno},sname=#{sname},did=#{did},sex=#{sex},password=#{password},tel=#{tel},institute=#{institute},majorname=#{majorname},grade=#{grade},classname=#{classname},dname=#{dname}
+		where sno=#{sno}
+
+	</update>
 </mapper>

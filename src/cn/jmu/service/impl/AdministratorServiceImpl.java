@@ -29,4 +29,16 @@ public class AdministratorServiceImpl implements AdministratorService{
 	public List<Student> findStudentByDname(String dname){
 		return administratorDAO.findStudentByDname(dname);
 	}
+	public Student findStudentBySno(String sno){
+		return administratorDAO.findStudentBySno(sno);
+	}
+	public int updateStudent (Student student){
+		return administratorDAO.updateStudent(student);
+	}
+	public int insertStudent (Student student){
+		return administratorDAO.insertStudent(student);
+	}
+	public int deleteStudent (String sno){
+		return administratorDAO.deleteStudent(sno);
+	}
 }
