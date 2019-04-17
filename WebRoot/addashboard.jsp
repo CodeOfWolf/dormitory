@@ -21,11 +21,11 @@
 
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#">Company name</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
       <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#">注销</a>
+          <a class="nav-link" href="#">注销</a>
         </li>
       </ul>
     </nav>
@@ -38,11 +38,11 @@
               <li class="nav-item">
                 <a class="nav-link active" href="${pageContext.request.contextPath}/findStudentByDname.do?dname=${ad.dname}" >
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                  	<h3>学生信息管理</h3><span class="sr-only">(current)</span>
+                  	<h3>学生信息管理</h3>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#">
+                <a class="nav-link" href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                  	<h3>维修信息管理</h3>
                 </a>

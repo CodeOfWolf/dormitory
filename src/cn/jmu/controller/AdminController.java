@@ -18,9 +18,7 @@ public class AdminController {
 	@RequestMapping(value="/adlogin.do")
 	//登录到管理员端首页
 	public String adlogin(String mno,String password,  Model model){
-		System.out.println(mno);
 		Administrator ad=administratorService.adCheck(mno, password);
-		System.out.println(mno);
 		model.addAttribute("ad", ad);
 		if(ad!=null){
 			return "addashboard";
