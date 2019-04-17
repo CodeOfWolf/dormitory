@@ -33,5 +33,35 @@ public class AdminController {
 		List<Student> students = this.administratorService.findStudentByDname(dname);
 		model.addAttribute("students", students);
 		return "adlist";
-	}                    
+	}
+	
+	@RequestMapping(value = "/findStudentBySno.do") // 成绩查询--教师
+	public String findStudentBySno(String sno,  Model model) {
+		System.out.println(sno);
+		Student student = this.administratorService.findStudentBySno(sno);
+		model.addAttribute("student", student);
+		return "updatestu";
+	}
+	
+	@RequestMapping(value = "/updateStudent.do") // 成绩查询--教师
+	public String updateStudent(Student student) {
+		System.out.println(student.getSno());
+		this.administratorService.updateStudent(student);
+		return "addashboard";
+	}
+	
+	@RequestMapping(value = "/insertStudent.do") // 成绩查询--教师
+	public String insertStudent(Student student) {
+		System.out.println(student.getSno());
+		this.administratorService.insertStudent(student);
+		return "addashboard";
+	}
+	
+	@RequestMapping(value = "/deleteStudent.do") // 成绩查询--教师
+	public String deleteStudent(String sno,  Model model) {
+		System.out.println(sno);
+		this.administratorService.deleteStudent(sno);
+		return "addashboard";
+	}
+	
 }

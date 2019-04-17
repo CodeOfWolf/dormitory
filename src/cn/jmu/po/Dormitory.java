@@ -2,7 +2,7 @@ package cn.jmu.po;
 
 public class Dormitory {
 	private String did;
-	private String floornum;
+	private String dname;
 	private String sno1;
 	private String sno2;
 	private String sno3;
@@ -16,11 +16,11 @@ public class Dormitory {
 	public void setDid(String did) {
 		this.did = did;
 	}
-	public String getFloornum() {
-		return floornum;
+	public String getDname() {
+		return dname;
 	}
-	public void setFloornum(String floornum) {
-		this.floornum = floornum;
+	public void setDname(String dname) {
+		this.dname = dname;
 	}
 	public String getSno1() {
 		return sno1;
@@ -66,8 +66,8 @@ public class Dormitory {
 	}
 	@Override
 	public String toString() {
-		return "Dormitory [did=" + did + ", floornum=" + floornum + ", sno1=" + sno1 + ", sno2=" + sno2 + ", sno3="
-				+ sno3 + ", sno4=" + sno4 + ", snum=" + snum + ", wp=" + wp + ", ep=" + ep + "]";
+		return "Dormitory [did=" + did + ", dname=" + dname + ", sno1=" + sno1 + ", sno2=" + sno2 + ", sno3=" + sno3
+				+ ", sno4=" + sno4 + ", snum=" + snum + ", wp=" + wp + ", ep=" + ep + "]";
 	}
 	
 }

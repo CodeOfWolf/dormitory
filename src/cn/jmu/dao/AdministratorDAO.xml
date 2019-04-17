@@ -13,4 +13,120 @@
 		resultType="cn.jmu.po.Student">
 		select * from Student where dname=#{dname}
 	</select>
+	
+	<select id="findStudentBySno" parameterType="String"
+		resultType="cn.jmu.po.Student">
+		select * from Student where sno=#{sno}
+	</select>
+	
+	<delete id="deleteStudent" parameterType="String">
+		delete from Student where sno=#{sno}
+	</delete>
+	
+	<insert id="insertStudent"
+		parameterType="cn.jmu.po.Student">
+		insert into
+		Student(sno,sname,did,sex,password,tel,institute,majorname,grade,classname,dname)
+		values(#{sno},#{sname},#{did},#{sex},#{password},#{tel},#{institute},#{majorname},#{grade},#{classname},#{dname})
+	</insert>
+	
+	<update id="updateStudent" parameterType="cn.jmu.po.Student">
+		update Student
+		set
+		sno=#{sno},sname=#{sname},did=#{did},sex=#{sex},password=#{password},tel=#{tel},institute=#{institute},majorname=#{majorname},grade=#{grade},classname=#{classname},dname=#{dname}
+		where sno=#{sno}
+
+	</update>
+	
+	
+	
+	
+	<select id="findFixByDname" parameterType="String"
+		resultType="cn.jmu.po.Fix">
+		select * from Fix where dname=#{dname}
+	</select>
+	
+	<select id="findFixByRid" parameterType="String"
+		resultType="cn.jmu.po.Fix">
+		select * from Fix where rid=#{rid}
+	</select>
+	
+	<delete id="deleteFix" parameterType="String">
+		delete from Fix where rid=#{rid}
+	</delete>
+	
+	<insert id="insertFix"
+		parameterType="cn.jmu.po.Fix">
+		insert into
+		Fix(rid,roomnum,dname,rr,rtime,rs)
+		values(#{rid},#{roomnum},#{dname},#{rr},#{rtime},#{rs})
+	</insert>
+	
+	<update id="updateFix" parameterType="cn.jmu.po.Fix">
+		update Fix
+		set
+		rid=#{rid},roomnum=#{roomnum},dname=#{dname},rr=#{rr},rtime=#{rtime},rs=#{rs}
+		where rid=#{rid}
+
+	</update>
+	
+	
+	<select id="findLateByDname" parameterType="String"
+		resultType="cn.jmu.po.Late">
+		select * from Late where dname=#{dname}
+	</select>
+	
+	<select id="findLateByLid" parameterType="String"
+		resultType="cn.jmu.po.Late">
+		select * from Late where lid=#{lid}
+	</select>
+	
+	<delete id="deleteLate" parameterType="String">
+		delete from Late where lid=#{lid}
+	</delete>
+	
+	<insert id="insertLate"
+		parameterType="cn.jmu.po.Late">
+		insert into
+		Late(lid,sno,sname,ltime,lr,dname)
+		values(#{lid},#{sno},#{sname},#{ltime},#{lr},#{dname})
+	</insert>
+	
+	<update id="updateLate" parameterType="cn.jmu.po.Late">
+		update Late
+		set
+		lid=#{lid},sno=#{sno},sname=#{sname},ltime=#{ltime},lr=#{lr},dname=#{dname}
+		where lid=#{lid}
+
+	</update>
+	
+	
+	<select id="findDormitoryByDname" parameterType="String"
+		resultType="cn.jmu.po.Dormitory">
+		select * from Dormitory where dname=#{dname}
+	</select>
+	
+	<select id="findDormitoryByDid" parameterType="String"
+		resultType="cn.jmu.po.Dormitory">
+		select * from Dormitory where did=#{did}
+	</select>
+	
+	<delete id="deleteDormitory" parameterType="String">
+		delete from Dormitory where did=#{did}
+	</delete>
+	
+	<insert id="insertDormitory"
+		parameterType="cn.jmu.po.Dormitory">
+		insert into
+		Dormitory(did,dname,sno1,sno2,sno3,sno4,snum,wp,ep)
+		values(#{did},#{dname},#{sno1},#{sno2},#{sno3},#{sno4},#{snum},#{wp},#{ep})
+	</insert>
+	
+	<update id="updateDormitory" parameterType="cn.jmu.po.Dormitory">
+		update Dormitory
+		set
+		did=#{did},dname=#{dname},sno1=#{sno1},sno2=#{sno2},sno3=#{sno3},sno4=#{sno4},snum=#{snum},wp=#{wp},ep=#{ep}
+		where did=#{did}
+
+	</update>
 </mapper>
