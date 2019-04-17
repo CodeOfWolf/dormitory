@@ -8,6 +8,13 @@ public class Late {
 	private String sname;
 	private Date ltime;
 	private String lr;
+	private String dname;
+	public String getDname() {
+		return dname;
+	}
+	public void setDname(String dname) {
+		this.dname = dname;
+	}
 	public int getLid() {
 		return lid;
 	}
@@ -40,7 +47,8 @@ public class Late {
 	}
 	@Override
 	public String toString() {
-		return "Late [lid=" + lid + ", sno=" + sno + ", sname=" + sname + ", ltime=" + ltime + ", lr=" + lr + "]";
+		return "Late [lid=" + lid + ", sno=" + sno + ", sname=" + sname + ", ltime=" + ltime + ", lr=" + lr + ", dname="
+				+ dname + "]";
 	}
 	
 }
