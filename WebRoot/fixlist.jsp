@@ -80,17 +80,17 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="i" items="${}" >
+                    <c:forEach var="i" items="${fixs}" >
                         <tr>
-                        	<td>${i.sno}</td>
-                        	<td>${i.sname}</td>
+                        	<td>${i.rid}</td>
                         	<td>${i.did}</td>
-                        	<td>${i.sex}</td>
-                        	<td>${i.tel}</td>
-                        	<td>${i.institute}</td>
+                        	<td>${i.dname}</td>
+                        	<td>${i.rr}</td>
+                        	<td>${i.rtime}</td>
+                        	<td>${i.rs}</td>
                         	<td>
-                        		<a href="${pageContext.request.contextPath}/" type="button" class="btn btn-primary">编辑</a>
-                        		<a href="${pageContext.request.contextPath}/" type="button" class="btn btn-danger">删除</a>
+                        		<a href="${pageContext.request.contextPath}/findFixByRid.do?rid=${i.rid}" type="button" class="btn btn-primary">编辑</a>
+                        		<a href="${pageContext.request.contextPath}/deleteFix.do?rid=${i.rid}" type="button" class="btn btn-danger">删除</a>
                         	</td>
                         </tr>
                      </c:forEach>

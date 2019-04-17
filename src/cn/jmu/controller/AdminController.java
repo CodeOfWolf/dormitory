@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.jmu.po.Administrator;
+import cn.jmu.po.Fix;
+import cn.jmu.po.Late;
 import cn.jmu.po.Student;
 import cn.jmu.service.AdministratorService;
 
@@ -23,11 +25,11 @@ public class AdminController {
 		Administrator ad=administratorService.adCheck(mno, password);
 		model.addAttribute("ad", ad);
 		session.setAttribute("admin", ad.getDname());
-		if(ad!=null){
+		if(ad!=null)
 			return "addashboard";
-		}else{
+		else
 			return "adlogin";
-		}
+		
 	}
 	
 	@RequestMapping(value = "/findStudentByDname.do") // 成绩查询--教师
@@ -67,4 +69,66 @@ public class AdminController {
 		return "addashboard";
 	}
 	
+	
+	
+	
+	@RequestMapping(value = "/findFixByDname.do") // 成绩查询--教师
+	public String findFixByDname(String dname,  Model model) {
+		System.out.println(dname);
+		List<Fix> fixs = this.administratorService.findFixByDname(dname);
+		model.addAttribute("fixs", fixs);
+		return "fixlist";
+	}
+	
+	@RequestMapping(value = "/findFixByRid.do") // 成绩查询--教师
+	public String findFixByRid(String rid,  Model model) {
+		System.out.println(rid);
+		Fix fix = this.administratorService.findFixByRid(rid);
+		model.addAttribute("fix", fix);
+		return "updatefix";
+	}
+	
+	@RequestMapping(value = "/updateFix.do") // 成绩查询--教师
+	public String updateFix(Fix fix) {
+		System.out.println(fix.getRid());
+		this.administratorService.updateFix(fix);
+		return "addashboard";
+	}
+	
+	@RequestMapping(value = "/deleteFix.do") // 成绩查询--教师
+	public String deleteFix(String rid,  Model model) {
+		System.out.println(rid);
+		this.administratorService.deleteFix(rid);
+		return "addashboard";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@RequestMapping(value = "/findLateByDname.do") // 成绩查询--教师
+	public String findLateByDname(String dname,  Model model) {
+		System.out.println(dname);
+		List<Late> lates = this.administratorService.findLateByDname(dname);
+		model.addAttribute("lates", lates);
+		return "latelist";
+	}
+	
+	@RequestMapping(value = "/insertLate.do") // 成绩查询--教师
+	public String insertLate(Late late) {
+		System.out.println(late.getLid());
+		this.administratorService.insertLate(late);
+		return "addashboard";
+	}
+	
+	@RequestMapping(value = "/deleteLate.do") // 成绩查询--教师
+	public String deleteLate(String lid,  Model model) {
+		System.out.println(lid);
+		this.administratorService.deleteLate(lid);
+		return "addashboard";
+	}
 }

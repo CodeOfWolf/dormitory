@@ -65,7 +65,7 @@
       		</nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-			<form action="${pageContext.request.contextPath}/" method="post">
+			<form action="${pageContext.request.contextPath}/insertLate.do" method="post">
 			<br>
 			<div class="row">
 			  <div class="col col-md-3">
@@ -84,7 +84,7 @@
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="lr">晚归原因</label>
-			    <input type="text" class="form-control" id="lr" name=lr" placeholder="晚归原因">
+			    <input type="text" class="form-control" id="lr" name="lr" placeholder="晚归原因">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="dname">宿舍楼</label>

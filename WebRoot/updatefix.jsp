@@ -65,38 +65,38 @@
       		</nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-			<form action="${pageContext.request.contextPath}/" method="post">
+			<form action="${pageContext.request.contextPath}/updateFix.do" method="post">
 			<br>
 			<div class="row">
 			  <div class="col col-md-3">
 			    <label for="rid">维修编号</label>
-			    <input type="text" class="form-control" id="rid" name="rid" value="" placeholder="维修编号">
+			    <input type="text" class="form-control" id="rid" name="rid" value="${fix.rid}" placeholder="维修编号">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="did">房间号</label>
-			    <input type="text" class="form-control" id="did" name="did" value="" placeholder="房间号">
+			    <input type="text" class="form-control" id="did" name="did" value="${fix.did}" placeholder="房间号">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="dname">宿舍楼</label>
-			    <input type="text" class="form-control" id="dname" name="dname" value="" placeholder="宿舍楼">
+			    <input type="text" class="form-control" id="dname" name="dname" value="${fix.dname}" placeholder="宿舍楼">
 			  </div>
 			  </div>
 			  <div class="row">
 			  <div class="col col-md-3">
 			    <label for="rr">维修原因</label>
-			    <input type="text" class="form-control" id="rr" name="rr" value="" placeholder="维修原因">
+			    <input type="text" class="form-control" id="rr" name="rr" value="${fix.rr}" placeholder="维修原因">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="rtime">维修登记日期</label>
-			    <input type="text" class="form-control" id="rtime" name=rtime" value="" placeholder="维修登记日期">
+			    <input type="text" class="form-control" id="rtime" name="rtime" value="${fix.rtime}" placeholder="维修登记日期">
 			  </div>
 			  <div class="col col-md-3">
 				<label for="rs">维修状态</label>
 				 <select class="form-control" id="rs" name="rs">
-				    <option>未审核</option>
-				    <option>待派工</option>
-				    <option>已派工</option>
-				    <option>已修理</option>
+				    <option value="未审核">未审核</option>
+				    <option value="待派工">待派工</option>
+				    <option value="已派工">已派工</option>
+				    <option value="已修理">已修理</option>
 				 </select>
 				</div>
 			</div><br>
