@@ -58,14 +58,14 @@
 	<insert id="insertFix"
 		parameterType="cn.jmu.po.Fix">
 		insert into
-		Fix(rid,roomnum,dname,rr,rtime,rs)
-		values(#{rid},#{roomnum},#{dname},#{rr},#{rtime},#{rs})
+		Fix(did,dname,rr,rtime,rs)
+		values(#{did},#{dname},#{rr},#{rtime},#{rs})
 	</insert>
 	
 	<update id="updateFix" parameterType="cn.jmu.po.Fix">
 		update Fix
 		set
-		rid=#{rid},roomnum=#{roomnum},dname=#{dname},rr=#{rr},rtime=#{rtime},rs=#{rs}
+		rid=#{rid},did=#{did},dname=#{dname},rr=#{rr},rtime=#{rtime},rs=#{rs}
 		where rid=#{rid}
 
 	</update>
@@ -88,8 +88,8 @@
 	<insert id="insertLate"
 		parameterType="cn.jmu.po.Late">
 		insert into
-		Late(lid,sno,sname,ltime,lr,dname)
-		values(#{lid},#{sno},#{sname},#{ltime},#{lr},#{dname})
+		Late(sno,sname,ltime,lr,dname)
+		values(#{sno},#{sname},#{ltime},#{lr},#{dname})
 	</insert>
 	
 	<update id="updateLate" parameterType="cn.jmu.po.Late">

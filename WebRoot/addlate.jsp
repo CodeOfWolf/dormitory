@@ -65,61 +65,33 @@
       		</nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-			<form action="${pageContext.request.contextPath}/updateStudent.do" method="post">
+			<form action="${pageContext.request.contextPath}/" method="post">
 			<br>
 			<div class="row">
 			  <div class="col col-md-3">
 			    <label for="sno">学号</label>
-			    <input type="text" class="form-control" id="sno" name="sno" value="${student.sno}" placeholder="学号">
+			    <input type="text" class="form-control" id="sno" name="sno" placeholder="学号">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="sname">姓名</label>
-			    <input type="text" class="form-control" id="sname" name="sname" value="${student.sname}" placeholder="姓名">
+			    <input type="text" class="form-control" id="sname" name="sname" placeholder="姓名">
 			  </div>
 			  </div>
 			  <div class="row">
 			  <div class="col col-md-3">
-			    <label for="did">房间号</label>
-			    <input type="text" class="form-control" id="did" name="did" value="${student.did}" placeholder="房间号">
+			    <label for="ltime">晚归日期</label>
+			    <input type="date" class="form-control" id="ltime" name="ltime" placeholder="晚归时间">
 			  </div>
 			  <div class="col col-md-3">
-			    <label for="sex">性别</label>
-			    <input type="text" class="form-control" id="sex" name="sex" value="${student.sex}" placeholder="性别">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="password">密码</label>
-			    <input type="text" class="form-control" id="password" name="password" value="${student.password}" placeholder="密码">
-			  </div>
-			  </div>
-			  <div class="row">
-			  <div class="col col-md-3">
-			    <label for="tel">手机号</label>
-			    <input type="text" class="form-control" id="tel" name="tel" value="${student.tel}" placeholder="手机号">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="institute">学院</label>
-			    <input type="text" class="form-control" id="institute" name="institute" value="${student.institute}" placeholder="学院">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="majorname">专业</label>
-			    <input type="text" class="form-control" id="majorname" name="majorname" value="${student.majorname}" placeholder="专业">
-			  </div>
-			  </div>
-			  <div class="row">
-			  <div class="col col-md-3">
-			    <label for="grade">年级</label>
-			    <input type="text" class="form-control" id="grade" name="grade" value="${student.grade}" placeholder="年级">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="classname">班级</label>
-			    <input type="text" class="form-control" id="classname" name="classname" value="${student.classname}" placeholder="班级">
+			    <label for="lr">晚归原因</label>
+			    <input type="text" class="form-control" id="lr" name=lr" placeholder="晚归原因">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="dname">宿舍楼</label>
-			    <input type="text" class="form-control" id="dname" name="dname" value="${student.dname}" placeholder="宿舍楼">
+			    <input type="text" class="form-control" id="dname" name="dname" placeholder="宿舍楼">
 			  </div>
-			  </div><br>
-			  <button type="submit" class="btn btn-primary">编辑</button>
+			</div><br>
+			  <button type="submit" class="btn btn-primary">添加</button>
 			</form>
         </main>
         <form id="deleteEmpForm" method="post">

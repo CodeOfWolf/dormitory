@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Fix {
 	private int rid;
-	private String roomnum;
+	private String did;
 	private String dname;
 	private String rr;
 	private Date rtime;
@@ -15,11 +15,11 @@ public class Fix {
 	public void setRid(int rid) {
 		this.rid = rid;
 	}
-	public String getRoomnum() {
-		return roomnum;
+	public String getDid() {
+		return did;
 	}
-	public void setRoomnum(String roomnum) {
-		this.roomnum = roomnum;
+	public void setDid(String did) {
+		this.did = did;
 	}
 	public String getDname() {
 		return dname;
@@ -47,8 +47,9 @@ public class Fix {
 	}
 	@Override
 	public String toString() {
-		return "Fix [rid=" + rid + ", roomnum=" + roomnum + ", dname=" + dname + ", rr=" + rr + ", rtime=" + rtime
-				+ ", rs=" + rs + "]";
+		return "Fix [rid=" + rid + ", did=" + did + ", dname=" + dname + ", rr=" + rr + ", rtime=" + rtime + ", rs="
+				+ rs + "]";
 	}
+
 	
 }

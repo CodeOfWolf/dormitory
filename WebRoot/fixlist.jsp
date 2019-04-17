@@ -44,7 +44,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#">
+                <a class="nav-link" href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                  	<h3>维修信息管理</h3>
                 </a>
@@ -65,62 +65,38 @@
       		</nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-			<form action="${pageContext.request.contextPath}/updateStudent.do" method="post">
-			<br>
-			<div class="row">
-			  <div class="col col-md-3">
-			    <label for="sno">学号</label>
-			    <input type="text" class="form-control" id="sno" name="sno" value="${student.sno}" placeholder="学号">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="sname">姓名</label>
-			    <input type="text" class="form-control" id="sname" name="sname" value="${student.sname}" placeholder="姓名">
-			  </div>
-			  </div>
-			  <div class="row">
-			  <div class="col col-md-3">
-			    <label for="did">房间号</label>
-			    <input type="text" class="form-control" id="did" name="did" value="${student.did}" placeholder="房间号">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="sex">性别</label>
-			    <input type="text" class="form-control" id="sex" name="sex" value="${student.sex}" placeholder="性别">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="password">密码</label>
-			    <input type="text" class="form-control" id="password" name="password" value="${student.password}" placeholder="密码">
-			  </div>
-			  </div>
-			  <div class="row">
-			  <div class="col col-md-3">
-			    <label for="tel">手机号</label>
-			    <input type="text" class="form-control" id="tel" name="tel" value="${student.tel}" placeholder="手机号">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="institute">学院</label>
-			    <input type="text" class="form-control" id="institute" name="institute" value="${student.institute}" placeholder="学院">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="majorname">专业</label>
-			    <input type="text" class="form-control" id="majorname" name="majorname" value="${student.majorname}" placeholder="专业">
-			  </div>
-			  </div>
-			  <div class="row">
-			  <div class="col col-md-3">
-			    <label for="grade">年级</label>
-			    <input type="text" class="form-control" id="grade" name="grade" value="${student.grade}" placeholder="年级">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="classname">班级</label>
-			    <input type="text" class="form-control" id="classname" name="classname" value="${student.classname}" placeholder="班级">
-			  </div>
-			  <div class="col col-md-3">
-			    <label for="dname">宿舍楼</label>
-			    <input type="text" class="form-control" id="dname" name="dname" value="${student.dname}" placeholder="宿舍楼">
-			  </div>
-			  </div><br>
-			  <button type="submit" class="btn btn-primary">编辑</button>
-			</form>
+
+            <h2>维修登记表</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th>维修编号</th>
+                        <th>房间号</th>
+                        <th>宿舍楼</th>
+                        <th>维修原因</th>
+                        <th>维修登记日期</th>
+                        <th>维修状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="i" items="${}" >
+                        <tr>
+                        	<td>${i.sno}</td>
+                        	<td>${i.sname}</td>
+                        	<td>${i.did}</td>
+                        	<td>${i.sex}</td>
+                        	<td>${i.tel}</td>
+                        	<td>${i.institute}</td>
+                        	<td>
+                        		<a href="${pageContext.request.contextPath}/" type="button" class="btn btn-primary">编辑</a>
+                        		<a href="${pageContext.request.contextPath}/" type="button" class="btn btn-danger">删除</a>
+                        	</td>
+                        </tr>
+                     </c:forEach>
+                     </tbody>
+                </table>
+            </div>
         </main>
         <form id="deleteEmpForm" method="post">
             <input type="hidden" name="_method" value="delete">

@@ -2,6 +2,8 @@ package cn.jmu.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,9 +19,10 @@ public class AdminController {
 	private AdministratorService administratorService;
 	@RequestMapping(value="/adlogin.do")
 	//登录到管理员端首页
-	public String adlogin(String mno,String password,  Model model){
+	public String adlogin(String mno,String password,  Model model,HttpSession session){
 		Administrator ad=administratorService.adCheck(mno, password);
 		model.addAttribute("ad", ad);
+		session.setAttribute("admin", ad.getDname());
 		if(ad!=null){
 			return "addashboard";
 		}else{
