@@ -6,7 +6,7 @@ public class Late {
 	private int lid;
 	private String sno;
 	private String sname;
-	private Date ltime;
+	private String ltime;
 	private String lr;
 	private String dname;
 	public String getDname() {
@@ -33,10 +33,10 @@ public class Late {
 	public void setSname(String sname) {
 		this.sname = sname;
 	}
-	public Date getLtime() {
+	public String getLtime() {
 		return ltime;
 	}
-	public void setLtime(Date ltime) {
+	public void setLtime(String ltime) {
 		this.ltime = ltime;
 	}
 	public String getLr() {

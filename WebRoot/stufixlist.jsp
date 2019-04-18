@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <!-- saved from url=(0053)https://getbootstrap.com/docs/4.1/examples/dashboard/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -64,7 +65,7 @@
       		</nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-            <h2><a href="${pageContext.request.contextPath}/" type="button" class="btn btn-success">添加</a></h2>
+            <h2><a href="${pageContext.request.contextPath}/stuaddfix.jsp" type="button" class="btn btn-success">添加</a></h2>
  			<div class="table-responsive">
                 <table class="table table-striped table-sm">
                     <thead>
@@ -78,16 +79,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="i" items="" >
+                    <c:forEach var="i" items="${fixs}" >
                         <tr>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
+                        	<td>${i.rid}</td>
+                        	<td>${i.did}</td>
+                        	<td>${i.dname}</td>
+                        	<td>${i.rr}</td>
+                        	<td>${i.rtime}</td>
+                        	<td>${i.rs}</td>
                         	<td>
-                        		<a href="${pageContext.request.contextPath}/?rid=" type="button" class="btn btn-danger">删除</a>
+                        		<a href="${pageContext.request.contextPath}/deleteFixS.do?rid=${i.rid}" type="button" class="btn btn-danger">删除</a>
                         	</td>
                         </tr>
                      </c:forEach>

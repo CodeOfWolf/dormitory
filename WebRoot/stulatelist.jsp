@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <!-- saved from url=(0053)https://getbootstrap.com/docs/4.1/examples/dashboard/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -78,14 +79,14 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="i" items="" >
+                    <c:forEach var="i" items="${lates}" >
                         <tr>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
-                        	<td></td>
+                        	<td>${i.lid}</td>
+                        	<td>${i.sno}</td>
+                        	<td>${i.sname}</td>
+                        	<td>${i.ltime}</td>
+                        	<td>${i.lr}</td>
+                        	<td>${i.dname}</td>
                         </tr>
                      </c:forEach>
                      </tbody>

@@ -7,7 +7,7 @@ public class Fix {
 	private String did;
 	private String dname;
 	private String rr;
-	private Date rtime;
+	private String rtime;
 	private String rs;
 	public int getRid() {
 		return rid;
@@ -33,10 +33,10 @@ public class Fix {
 	public void setRr(String rr) {
 		this.rr = rr;
 	}
-	public Date getRtime() {
+	public String getRtime() {
 		return rtime;
 	}
-	public void setRtime(Date rtime) {
+	public void setRtime(String rtime) {
 		this.rtime = rtime;
 	}
 	public String getRs() {

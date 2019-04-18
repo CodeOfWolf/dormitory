@@ -69,49 +69,49 @@
 			<div class="row">
 			  <div class="col col-md-3">
 			    <label for="sno">学号</label>
-			    <input type="text" class="form-control" id="sno" name="sno" value="">
+			    <input type="text" class="form-control" id="sno" name="sno" value="${students.sno}">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="sname">姓名</label>
-			    <input type="text" class="form-control" id="sname" name="sname" value="">
+			    <input type="text" class="form-control" id="sname" name="sname" value="${students.sname}">
 			  </div>
 			  </div>
 			  <div class="row">
 			  <div class="col col-md-3">
 			    <label for="did">房间号</label>
-			    <input type="text" class="form-control" id="did" name="did" value="">
+			    <input type="text" class="form-control" id="did" name="did" value="${students.did}">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="sex">性别</label>
-			    <input type="text" class="form-control" id="sex" name="sex" value="">
+			    <input type="text" class="form-control" id="sex" name="sex" value="${students.sex}">
 			  </div>
 			  </div>
 			  <div class="row">
 			  <div class="col col-md-3">
 			    <label for="tel">手机号</label>
-			    <input type="text" class="form-control" id="tel" name="tel" value="">
+			    <input type="text" class="form-control" id="tel" name="tel" value="${students.tel}">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="institute">学院</label>
-			    <input type="text" class="form-control" id="institute" name="institute" value="">
+			    <input type="text" class="form-control" id="institute" name="institute" value="${students.institute}">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="majorname">专业</label>
-			    <input type="text" class="form-control" id="majorname" name="majorname" value="">
+			    <input type="text" class="form-control" id="majorname" name="majorname" value="${students.majorname}">
 			  </div>
 			  </div>
 			  <div class="row">
 			  <div class="col col-md-3">
 			    <label for="grade">年级</label>
-			    <input type="text" class="form-control" id="grade" name="grade" value="">
+			    <input type="text" class="form-control" id="grade" name="grade" value="${students.grade}">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="classname">班级</label>
-			    <input type="text" class="form-control" id="classname" name="classname" value="">
+			    <input type="text" class="form-control" id="classname" name="classname" value="${students.classname}">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="dname">宿舍楼</label>
-			    <input type="text" class="form-control" id="dname" name="dname" value="">
+			    <input type="text" class="form-control" id="dname" name="dname" value="${students.dname}">
 			  </div>
 			  </div>
 			</form>
