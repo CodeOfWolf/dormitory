@@ -8,4 +8,87 @@
 		resultType="cn.jmu.po.Student">
 		select * from student where sno=#{sno}
 	</select>
+	
+	
+	
+	<select id="findStudentBySnoS" parameterType="String"
+		resultType="cn.jmu.po.Student">
+		select * from Student where sno=#{sno}
+	</select>
+	
+	
+	<update id="updateStudentS" parameterType="cn.jmu.po.Student">
+		update Student
+		set
+		sno=#{sno},sname=#{sname},did=#{did},sex=#{sex},password=#{password},tel=#{tel},institute=#{institute},majorname=#{majorname},grade=#{grade},classname=#{classname},dname=#{dname}
+		where sno=#{sno}
+
+	</update>
+	
+	
+	
+
+
+	
+	<select id="findFixByDidS" parameterType="String"
+		resultType="cn.jmu.po.Fix">
+		select * from Fix where did=#{did}
+	</select>
+	
+	<select id="findFixByRidS" parameterType="String"
+		resultType="cn.jmu.po.Fix">
+		select * from Fix where rid=#{rid}
+	</select>
+	
+	<delete id="deleteFixS" parameterType="String">
+		delete from Fix where rid=#{rid}
+	</delete>
+	
+	<insert id="insertFixS"
+		parameterType="cn.jmu.po.Fix">
+		insert into
+		Fix(did,dname,rr,rtime,rs)
+		values(#{did},#{dname},#{rr},#{rtime},#{rs})
+	</insert>
+	
+	<update id="updateFixS" parameterType="cn.jmu.po.Fix">
+		update Fix
+		set
+		rid=#{rid},did=#{did},dname=#{dname},rr=#{rr},rtime=#{rtime},rs=#{rs}
+		where rid=#{rid}
+
+	</update>
+
+
+
+	
+	
+	<select id="findLateBySnoS" parameterType="String"
+		resultType="cn.jmu.po.Late">
+		select * from Late where sno=#{sno}
+	</select>
+	
+	<select id="findLateByLidS" parameterType="String"
+		resultType="cn.jmu.po.Late">
+		select * from Late where lid=#{lid}
+	</select>
+	
+	
+	
+
+
+	
+	<select id="findDormitoryByDidS" parameterType="String"
+		resultType="cn.jmu.po.Dormitory">
+		select * from Dormitory where did=#{did}
+	</select>
+	
+	
+	<update id="updateDormitoryS" parameterType="cn.jmu.po.Dormitory">
+		update Dormitory
+		set
+		did=#{did},dname=#{dname},sno1=#{sno1},sno2=#{sno2},sno3=#{sno3},sno4=#{sno4},snum=#{snum},wp=#{wp},ep=#{ep}
+		where did=#{did}
+
+	</update>
 </mapper>
