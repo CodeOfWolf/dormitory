@@ -12,7 +12,7 @@
     <meta name="author" content="" />
     <link rel="icon" href="images/jmuxh.jpg" />
 
-    <title>学生信息</title>
+    <title>学生编辑</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./dashboard_files/bootstrap.min.css" rel="stylesheet" />
