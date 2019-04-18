@@ -25,6 +25,7 @@ public class AdminController {
 		Administrator ad=administratorService.adCheck(mno, password);
 		model.addAttribute("ad", ad);
 		session.setAttribute("admin", ad.getDname());
+		session.setAttribute("adname",ad.getAdname() );
 		if(ad!=null)
 			return "addashboard";
 		else
@@ -130,5 +131,10 @@ public class AdminController {
 		System.out.println(lid);
 		this.administratorService.deleteLate(lid);
 		return "addashboard";
+	}
+	@RequestMapping(value = "/logout.do")
+	public String logout(HttpSession session){
+		session.invalidate();
+		return "adlogin";
 	}
 }
