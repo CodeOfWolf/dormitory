@@ -37,7 +37,7 @@
             <div class="sidebar-sticky">
               <ul class="nav flex-column">
                 <li class="nav-item">
-	                <a class="nav-link active" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#" >
+	                <a class="nav-link active" href="" >
 	                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
 	                  	<h3>学生信息</h3><span class="sr-only">(current)</span>
 	                </a>
@@ -64,135 +64,31 @@
       		</nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-
-            <h2>Section title</h2>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>lastName</th>
-                        <th>email</th>
-                        <th>gender</th>
-                        <th>department</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                          <td>1,001</td>
-                          <td>Lorem</td>
-                          <td>ipsum</td>
-                          <td>dolor</td>
-                          <td>sit</td>
-                        </tr>
-                        <tr>
-                          <td>1,002</td>
-                          <td>amet</td>
-                          <td>consectetur</td>
-                          <td>adipiscing</td>
-                          <td>elit</td>
-                        </tr>
-                        <tr>
-                          <td>1,003</td>
-                          <td>Integer</td>
-                          <td>nec</td>
-                          <td>odio</td>
-                          <td>Praesent</td>
-                        </tr>
-                        <tr>
-                          <td>1,003</td>
-                          <td>libero</td>
-                          <td>Sed</td>
-                          <td>cursus</td>
-                          <td>ante</td>
-                        </tr>
-                        <tr>
-                          <td>1,004</td>
-                          <td>dapibus</td>
-                          <td>diam</td>
-                          <td>Sed</td>
-                          <td>nisi</td>
-                        </tr>
-                        <tr>
-                          <td>1,005</td>
-                          <td>Nulla</td>
-                          <td>quis</td>
-                          <td>sem</td>
-                          <td>at</td>
-                        </tr>
-                        <tr>
-                          <td>1,006</td>
-                          <td>nibh</td>
-                          <td>elementum</td>
-                          <td>imperdiet</td>
-                          <td>Duis</td>
-                        </tr>
-                        <tr>
-                          <td>1,007</td>
-                          <td>sagittis</td>
-                          <td>ipsum</td>
-                          <td>Praesent</td>
-                          <td>mauris</td>
-                        </tr>
-                        <tr>
-                          <td>1,008</td>
-                          <td>Fusce</td>
-                          <td>nec</td>
-                          <td>tellus</td>
-                          <td>sed</td>
-                        </tr>
-                        <tr>
-                          <td>1,009</td>
-                          <td>augue</td>
-                          <td>semper</td>
-                          <td>porta</td>
-                          <td>Mauris</td>
-                        </tr>
-                        <tr>
-                          <td>1,010</td>
-                          <td>massa</td>
-                          <td>Vestibulum</td>
-                          <td>lacinia</td>
-                          <td>arcu</td>
-                        </tr>
-                        <tr>
-                          <td>1,011</td>
-                          <td>eget</td>
-                          <td>nulla</td>
-                          <td>Class</td>
-                          <td>aptent</td>
-                        </tr>
-                        <tr>
-                          <td>1,012</td>
-                          <td>taciti</td>
-                          <td>sociosqu</td>
-                          <td>ad</td>
-                          <td>litora</td>
-                        </tr>
-                        <tr>
-                          <td>1,013</td>
-                          <td>torquent</td>
-                          <td>per</td>
-                          <td>conubia</td>
-                          <td>nostra</td>
-                        </tr>
-                        <tr>
-                          <td>1,014</td>
-                          <td>per</td>
-                          <td>inceptos</td>
-                          <td>himenaeos</td>
-                          <td>Curabitur</td>
-                        </tr>
-                        <tr>
-                          <td>1,015</td>
-                          <td>sodales</td>
-                          <td>ligula</td>
-                          <td>in</td>
-                          <td>libero</td>
-                        </tr>
-                      </tbody>
-                </table>
-            </div>
+			<form action="${pageContext.request.contextPath}/updateFix.do" method="post">
+			<br>
+			<div class="row">
+			  <div class="col col-md-3">
+			    <label for="did">房间号</label>
+			    <input type="text" class="form-control" id="did" name="did" value="${fix.did}" placeholder="房间号">
+			  </div>
+			  <div class="col col-md-3">
+			    <label for="dname">宿舍楼</label>
+			    <input type="text" class="form-control" id="dname" name="dname" value="${fix.dname}" placeholder="宿舍楼">
+			  </div>
+			  </div>
+			  <div class="row">
+			  <div class="col col-md-3">
+			    <label for="rr">维修原因</label>
+			    <input type="text" class="form-control" id="rr" name="rr" value="${fix.rr}" placeholder="维修原因">
+			  </div>
+			  <div class="col col-md-3">
+			    <label for="rtime">维修登记日期</label>
+			    <input type="date" class="form-control" id="rtime" name="rtime" value="${fix.rtime}" placeholder="维修登记日期">
+			  </div>
+			</div><br>
+				<input type="hidden" name="rs" value="未审核">
+			  <button type="submit" class="btn btn-primary">添加</button>
+			</form>
         </main>
         <form id="deleteEmpForm" method="post">
             <input type="hidden" name="_method" value="delete">
