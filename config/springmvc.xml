@@ -22,4 +22,32 @@
 		<property name="prefix" value="/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	<!-- 拦截器 -->
+	<mvc:interceptors>  
+    <mvc:interceptor>   
+        <mvc:mapping path="/findStudentByDname.do" />   
+        <mvc:mapping path="/findStudentBySno.do" />
+        <mvc:mapping path="/updateStudent.do" />
+        <mvc:mapping path="/insertStudent.do" />
+        <mvc:mapping path="/deleteStudent.do" />
+        <mvc:mapping path="/findFixByDname.do" />
+        <mvc:mapping path="/findFixByRid.do" />
+        <mvc:mapping path="/updateFix.do" />
+        <mvc:mapping path="/deleteFix.do" />
+        <mvc:mapping path="/findLateByDname.do" />
+        <mvc:mapping path="/insertLate.do" />
+        <mvc:mapping path="/deleteLate.do" />                          
+        <bean class="cn.jmu.interceptor.AdInterceptor"></bean>  
+    </mvc:interceptor>  
+	</mvc:interceptors>
+	<mvc:interceptors>  
+    <mvc:interceptor>        
+        <mvc:mapping path="/findStudentBySnoS.do" /> 
+        <mvc:mapping path="/findFixByDidS.do" /> 
+        <mvc:mapping path="/deleteFixS.do" /> 
+        <mvc:mapping path="/insertFixS.do" /> 
+        <mvc:mapping path="/findLateBySnoS.do" />                       
+        <bean class="cn.jmu.interceptor.StuInterceptor"></bean>  
+    </mvc:interceptor>  
+	</mvc:interceptors>
 </beans>

@@ -25,6 +25,7 @@ public class StudentController {
 		model.addAttribute("stu", stu);
 		session.setAttribute("stusno", stu.getSno());
 		session.setAttribute("studid", stu.getDid());
+		session.setAttribute("sname", stu.getSname());
 		if(stu!=null){
 			return "dashboard";
 		}else{
@@ -80,5 +81,10 @@ public class StudentController {
 		List<Late> lates = this.studentService.findLateBySnoS(sno);
 		model.addAttribute("lates", lates);
 		return "stulatelist";
+	}
+	@RequestMapping(value = "/stulogout.do")
+	public String stuLogOut(HttpSession session){
+		session.invalidate();
+		return "login";
 	}
 }
