@@ -50,7 +50,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="${pageContext.request.contextPath}/findDormitoryByDname.do?dname=<%=session.getAttribute("admin")%>">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                   	<h3>水电信息管理</h3>
                 </a>
@@ -65,48 +65,48 @@
       		</nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-			<form action="${pageContext.request.contextPath}/" method="post">
+			<form action="${pageContext.request.contextPath}/updateDormitory.do" method="post">
 			<br>
 			<div class="row">
 			  <div class="col col-md-3">
 			    <label for="did">房间号</label>
-			    <input type="text" class="form-control" id="did" name="did" value="" placeholder="房间号">
+			    <input type="text" class="form-control" id="did" name="did" value="${ewp.did}" placeholder="房间号">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="dname">宿舍楼</label>
-			    <input type="text" class="form-control" id="dname" name="dname" value="" placeholder="宿舍楼">
+			    <input type="text" class="form-control" id="dname" name="dname" value="${ewp.dname}" placeholder="宿舍楼">
 			  </div>
 			  </div>
 			  <div class="row">
 			  <div class="col col-md-3">
 			    <label for="sno1">一床学号</label>
-			    <input type="text" class="form-control" id="sno1" name="sno1" value="" placeholder="一床学号">
+			    <input type="text" class="form-control" id="sno1" name="sno1" value="${ewp.sno1}" placeholder="一床学号">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="sno2">二床学号</label>
-			    <input type="text" class="form-control" id="sno2" name="sno2" value="" placeholder="二床学号">
+			    <input type="text" class="form-control" id="sno2" name="sno2" value="${ewp.sno2}" placeholder="二床学号">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="sno3">三床学号</label>
-			    <input type="text" class="form-control" id="sno3" name="sno3" value="" placeholder="三床学号">
+			    <input type="text" class="form-control" id="sno3" name="sno3" value="${ewp.sno3}" placeholder="三床学号">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="sno4">四床学号</label>
-			    <input type="text" class="form-control" id="sno4" name="sno4" value="" placeholder="四床学号">
+			    <input type="text" class="form-control" id="sno4" name="sno4" value="${ewp.sno4}" placeholder="四床学号">
 			  </div>
 			  </div>
 			  <div class="row">
 			  <div class="col col-md-3">
 			    <label for="snum">总人数</label>
-			    <input type="text" class="form-control" id="snum" name="snum" value="" placeholder="总人数">
+			    <input type="text" class="form-control" id="snum" name="snum" value="${ewp.snum}" placeholder="总人数">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="wp">水费</label>
-			    <input type="text" class="form-control" id="wp" name="wp" value="" placeholder="水费">
+			    <input type="text" class="form-control" id="wp" name="wp" value="${ewp.wp}" placeholder="水费">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="ep">电费</label>
-			    <input type="text" class="form-control" id="ep" name="ep" value="" placeholder="电费">
+			    <input type="text" class="form-control" id="ep" name="ep" value="${ewp.ep}" placeholder="电费">
 			  </div>
 			  </div><br>
 			  <button type="submit" class="btn btn-primary">编辑</button>

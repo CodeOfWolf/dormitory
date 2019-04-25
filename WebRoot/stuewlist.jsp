@@ -23,11 +23,11 @@
 
 <body th:inline="text">
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#">Company name</a>
+      <li class="navbar-brand col-sm-3 col-md-2 mr-0">学生:<%=session.getAttribute("sname")%></li>
         <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
         <ul class="navbar-nav px-3">
           <li class="nav-item text-nowrap">
-            <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#">注销</a>
+          <a class="nav-link" href="${pageContext.request.contextPath}/stulogout.do">注销</a>
           </li>
         </ul>
       </nav>
@@ -37,25 +37,25 @@
             <div class="sidebar-sticky">
               <ul class="nav flex-column">
                 <li class="nav-item">
-	                <a class="nav-link active" href="" >
+	                <a class="nav-link active" href="${pageContext.request.contextPath}/findStudentBySnoS.do?sno=<%=session.getAttribute("stusno")%>" >
 	                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
 	                  	<h3>学生信息</h3><span class="sr-only">(current)</span>
 	                </a>
               	</li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/findLateBySnoS.do?sno=<%=session.getAttribute("stusno")%>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                        <h3>晚归信息</h3>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/dashboard/#">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/findFixByDidS.do?did=<%=session.getAttribute("studid")%>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                         <h3>维修信息</h3>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/findDormitoryByDidS.do?did=<%=session.getAttribute("studid")%>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                         <h3>水电信息</h3>
                   </a>
@@ -69,21 +69,21 @@
 			<div class="row">
 			  <div class="col col-md-3">
 			    <label for="did">房间号</label>
-			    <input type="text" class="form-control" id="did" name="did" value="">
+			    <input type="text" class="form-control" id="did" name="did" value="${ewp.did}">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="dname">宿舍楼</label>
-			    <input type="text" class="form-control" id="dname" name="dname" value="">
+			    <input type="text" class="form-control" id="dname" name="dname" value="${ewp.dname}">
 			  </div>
 			  </div>
 			  <div class="row">
 			  <div class="col col-md-3">
 			    <label for="wp">水费</label>
-			    <input type="text" class="form-control" id="wp" name="wp" value="">
+			    <input type="text" class="form-control" id="wp" name="wp" value="${ewp.wp}">
 			  </div>
 			  <div class="col col-md-3">
 			    <label for="ep">电费</label>
-			    <input type="text" class="form-control" id="ep" name="ep" value="">
+			    <input type="text" class="form-control" id="ep" name="ep" value="${ewp.ep}">
 			  </div>
 			  </div>
 			</form>

@@ -36,7 +36,10 @@
         <mvc:mapping path="/deleteFix.do" />
         <mvc:mapping path="/findLateByDname.do" />
         <mvc:mapping path="/insertLate.do" />
-        <mvc:mapping path="/deleteLate.do" />                          
+        <mvc:mapping path="/deleteLate.do" />    
+        <mvc:mapping path="/findDormitoryByDname.do" /> 
+        <mvc:mapping path="/findDormitoryByDid.do" /> 
+        <mvc:mapping path="/updateDormitory.do" />                       
         <bean class="cn.jmu.interceptor.AdInterceptor"></bean>  
     </mvc:interceptor>  
 	</mvc:interceptors>
@@ -46,7 +49,8 @@
         <mvc:mapping path="/findFixByDidS.do" /> 
         <mvc:mapping path="/deleteFixS.do" /> 
         <mvc:mapping path="/insertFixS.do" /> 
-        <mvc:mapping path="/findLateBySnoS.do" />                       
+        <mvc:mapping path="/findLateBySnoS.do" />    
+        <mvc:mapping path="/findDormitoryByDidS.do" />                    
         <bean class="cn.jmu.interceptor.StuInterceptor"></bean>  
     </mvc:interceptor>  
 	</mvc:interceptors>

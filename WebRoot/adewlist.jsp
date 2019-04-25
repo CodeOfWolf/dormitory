@@ -50,7 +50,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="${pageContext.request.contextPath}/findDormitoryByDname.do?dname=<%=session.getAttribute("admin")%>">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                   	<h3>水电信息管理</h3>
                 </a>
@@ -83,19 +83,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="i" items="" >
+                    <c:forEach var="i" items="${ewlist}" >
                         <tr>
-                        	<td>${i.sno}</td>
-                        	<td>${i.sname}</td>
                         	<td>${i.did}</td>
-                        	<td>${i.sex}</td>
-                        	<td>${i.tel}</td>
-                        	<td>${i.institute}</td>
-                        	<td>${i.majorname}</td>
-                        	<td>${i.grade}</td>
-                        	<td>${i.classname}</td>
+                        	<td>${i.dname}</td>
+                        	<td>${i.sno1}</td>
+                        	<td>${i.sno2}</td>
+                        	<td>${i.sno3}</td>
+                        	<td>${i.sno4}</td>
+                        	<td>${i.snum}</td>
+                        	<td>${i.wp}</td>
+                        	<td>${i.ep}</td>
                         	<td>
-                        		<a href="${pageContext.request.contextPath}/" type="button" class="btn btn-primary">编辑</a>
+                        		<a href="${pageContext.request.contextPath}/findDormitoryByDid.do?did=${i.did}" type="button" class="btn btn-primary">编辑</a>
                         	</td>
                         </tr>
                      </c:forEach>

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import cn.jmu.po.Dormitory;
 import cn.jmu.po.Fix;
 import cn.jmu.po.Late;
 import cn.jmu.po.Student;
@@ -87,4 +88,14 @@ public class StudentController {
 		session.invalidate();
 		return "login";
 	}
+	
+	
+	@RequestMapping(value = "/findDormitoryByDidS.do") // 成绩查询--教师
+	public String findDormitoryByDidS(String did,  Model model) {
+		System.out.println(did);
+		Dormitory ewp = this.studentService.findDormitoryByDidS(did);
+		model.addAttribute("ewp", ewp);
+		return "stuewlist";
+	}
+
 }

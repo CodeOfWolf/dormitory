@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.jmu.po.Administrator;
+import cn.jmu.po.Dormitory;
 import cn.jmu.po.Fix;
 import cn.jmu.po.Late;
 import cn.jmu.po.Student;
@@ -137,4 +138,26 @@ public class AdminController {
 		session.invalidate();
 		return "adlogin";
 	}
+	@RequestMapping(value = "/findDormitoryByDname.do") // 成绩查询--教师
+	public String findDormitoryByDname(String dname,  Model model) {
+		System.out.println(dname);
+		List<Dormitory> ewlist = this.administratorService.findDormitoryByDname(dname);
+		model.addAttribute("ewlist", ewlist);
+		return "adewlist";
+	}
+	
+	@RequestMapping(value = "/findDormitoryByDid.do") // 成绩查询--教师
+	public String findDormitoryByDid(String did,  Model model) {
+		System.out.println(did);
+		Dormitory ewp = this.administratorService.findDormitoryByDid(did);
+		model.addAttribute("ewp", ewp);
+		return "updateew";
+	}
+	
+	@RequestMapping(value = "/updateDormitory.do") // 成绩查询--教师
+	public String updateDormitory(Dormitory dormitory) {
+		this.administratorService.updateDormitory(dormitory);
+		return "addashboard";
+	}
+
 }
